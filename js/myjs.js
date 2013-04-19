@@ -76,43 +76,27 @@ $("#puttytemplate-qr").bind("pageinit",function(){
 		
 	});*/
 	
-	$("#puttytemplate-scanqr1").bind('click',function(e){
-		
-		
-	var scanner = window.PhoneGap.require("cordova/plugin/BarcodeScanner");
-		scanner.scan( 
-			function (result) { 
-				alert("We got a barcode\n" + "Result: " + result.text + "\n" + 
-						"Format: " + result.format + "\n" + "Cancelled: " + result.cancelled); 
-				}, 
-			function (error) { 
-				alert("Scanning failed: " + error); 
-				} 
-			);
-	});
 	
-	$("#puttytemplate-scanqr2").bind('click',function(e){
+	
+	$("#puttytemplate-scanqr").bind('click',function(e){
 		window.plugins.barcodeScanner.scan(
     		function(result) {
-       				if (result.cancelled)
-            	alert("the user cancelled the scan")
-        			else
-            	alert("we got a barcode: " + result.text)
+       				if (result.cancelled){
+            			alert("the user cancelled the scan");
+						$("#qr-result").text("You just cancelled it :'(");
+					}
+        			else{
+            			alert("we got a barcode: " + result.text);
+						$("#qr-result").html("<h1>Yesssssssss !!! :D</h1><br /> By the way, the result is :"+result.text);
+					}
     		},
     		function(error) {
-        		alert("scanning failed: " + error)
+        		alert("scanning failed: " + error);
     		}
 		)
 	});
 	
 	
-	$("#puttytemplate-scanqr3").bind('click',function(e){
-		
-	});
-	
-	$("#puttytemplate-scanqr4").bind('click',function(e){
-		alert("Warut Lee");
-	});
 	
 	
 });

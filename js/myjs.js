@@ -63,7 +63,7 @@ $("#login").bind("pageinit",function(){
 $("#puttytemplate-qr").bind("pageinit",function(){
 	
 	
-	$("#puttytemplate-scanqr").bind('click',function(e){
+	/*$("#puttytemplate-scanqr").bind('click',function(e){
 		
 		window.plugins.barcodeScanner.scan(
 			
@@ -74,5 +74,20 @@ $("#puttytemplate-qr").bind("pageinit",function(){
 				alert("Scanning failed: " + error); 
 			});
 		
+	});*/
+	
+	$("#puttytemplate-scanqr").bind('click',function(e){
+	var scanner = window.PhoneGap.require("cordova/plugin/BarcodeScanner");
+		scanner.scan( 
+			function (result) { 
+				alert("We got a barcode\n" + "Result: " + result.text + "\n" + 
+						"Format: " + result.format + "\n" + "Cancelled: " + result.cancelled); 
+				}, 
+			function (error) { 
+				alert("Scanning failed: " + error); 
+				} 
+			);
 	});
+	
+	
 });

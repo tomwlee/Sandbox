@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <widget xmlns = "http://www.w3.org/ns/widgets"
     xmlns:gap = "http://phonegap.com/ns/1.0"
-    id        = "com.phonegap.puttytemplate"
+    id        = "com.phonegap.sandbox"
     version   = "1.0.1">
 
-<name>PuttyTemplate</name>
+<name>Sandbox</name>
 
 <description>
-Putty Mobile Template
+Sandbox
 </description>
 
 <author href="https://claydata.com" email="leew@claydata.com">
@@ -24,7 +24,6 @@ Warut Lee.
 
 <gap:splash src="splash/bb/splash.png" gap:platform="blackberry" />
 
-<gap:plugin name="ChildBrowser"/>
 <gap:plugin name="BarcodeScanner" />
 </widget>
 

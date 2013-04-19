@@ -82,11 +82,11 @@ $("#puttytemplate-qr").bind("pageinit",function(){
 		window.plugins.barcodeScanner.scan(
     		function(result) {
        				if (result.cancelled){
-            			alert("the user cancelled the scan");
+            			//alert("the user cancelled the scan");
 						$("#qr-result").text("You just cancelled it :'(");
 					}
         			else{
-            			alert("we got a barcode: " + result.text);
+            			//alert("we got a barcode: " + result.text);
 						$("#qr-result").html("<h1>Yesssssssss !!! :D</h1><br /> By the way, the result is :"+result.text);
 					}
     		},

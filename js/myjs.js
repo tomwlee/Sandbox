@@ -62,7 +62,7 @@ $("#login").bind("pageinit",function(){
 
 $("#puttytemplate-qr").bind("pageinit",function(){
 	
-	
+	$("#qr-result").html();
 	/*$("#puttytemplate-scanqr").bind('click',function(e){
 		
 		window.plugins.barcodeScanner.scan(
@@ -87,7 +87,7 @@ $("#puttytemplate-qr").bind("pageinit",function(){
 					}
         			else{
             			//alert("we got a barcode: " + result.text);
-						$("#qr-result").html("<h1>Yesssssssss !!! :D</h1><br /> By the way, the result is :"+result.text);
+						$("#qr-result").html("<h1>Yesssssssss !!! :D</h1><br /> By the way, the result is :<a data-rel='external' class='qr-result-link' >"+result.text+"</a>");
 					}
     		},
     		function(error) {

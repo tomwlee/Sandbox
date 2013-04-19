@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns = "http://www.w3.org/ns/widgets"
+    xmlns:gap = "http://phonegap.com/ns/1.0"
+    id        = "com.phonegap.puttytemplate"
+    version   = "1.0.1">
+
+<name>PuttyTemplate</name>
+
+<description>
+Putty Mobile Template
+</description>
+
+<author href="https://claydata.com" email="leew@claydata.com">
+Warut Lee.
+</author>
+<icon src="icon.png" />
+<gap:splash src="splash/an/splash.png" />
+
+<gap:splash src="splash/ios/Default.png" width="320" height="480" />
+<gap:splash src="splash/ios/Default_at_2x.png" width="640" height="960" />
+<gap:splash src="splash/ios/Default_iphone5.png" width="640" height="1136" />
+<gap:splash src="splash/ios/Default-Landscape.png" width="1024" height="768" />
+<gap:splash src="splash/ios/Default-Portrait.png" width="768" height="1024" />
+
+<gap:splash src="splash/bb/splash.png" gap:platform="blackberry" />
+
+<gap:plugin name="ChildBrowser"/>
+<gap:plugin name="BarcodeScanner" />
+</widget>
+

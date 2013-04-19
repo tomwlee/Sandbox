@@ -62,7 +62,7 @@ $("#login").bind("pageinit",function(){
 
 $("#puttytemplate-qr").bind("pageinit",function(){
 	
-	$("#qr-result").html();
+	$("#qr-result").html("");
 	/*$("#puttytemplate-scanqr").bind('click',function(e){
 		
 		window.plugins.barcodeScanner.scan(

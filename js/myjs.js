@@ -76,7 +76,9 @@ $("#puttytemplate-qr").bind("pageinit",function(){
 		
 	});*/
 	
-	$("#puttytemplate-scanqr").bind('click',function(e){
+	$("#puttytemplate-scanqr1").bind('click',function(e){
+		
+		
 	var scanner = window.PhoneGap.require("cordova/plugin/BarcodeScanner");
 		scanner.scan( 
 			function (result) { 
@@ -87,6 +89,29 @@ $("#puttytemplate-qr").bind("pageinit",function(){
 				alert("Scanning failed: " + error); 
 				} 
 			);
+	});
+	
+	$("#puttytemplate-scanqr2").bind('click',function(e){
+		window.plugins.barcodeScanner.scan(
+    		function(result) {
+       				if (result.cancelled)
+            	alert("the user cancelled the scan")
+        			else
+            	alert("we got a barcode: " + result.text)
+    		},
+    		function(error) {
+        		alert("scanning failed: " + error)
+    		}
+		)
+	});
+	
+	
+	$("#puttytemplate-scanqr3").bind('click',function(e){
+		
+	});
+	
+	$("#puttytemplate-scanqr4").bind('click',function(e){
+		alert("Warut Lee");
 	});
 	
 	

@@ -87,7 +87,7 @@ $("#puttytemplate-qr").bind("pageinit",function(){
 					}
         			else{
             			//alert("we got a barcode: " + result.text);
-						$("#qr-result").html("<h1>Yesssssssss !!! :D</h1><br /> By the way, the result is :<a data-rel='external' class='qr-result-link' >"+result.text+"</a>");
+						$("#qr-result").html("<h1>Yesssssssss !!! :D</h1><br /> By the way, the result is :<a href='"+result.text+"' data-rel='external' class='qr-result-link' >"+result.text+"</a>");
 					}
     		},
     		function(error) {
